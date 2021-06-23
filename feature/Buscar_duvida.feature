@@ -39,3 +39,4 @@ Scenario: Busca com erro de digitação de uma dúvida existente.
             And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu tenho “0” dúvidas encontradas.
+            And Eu vejo uma mensagem de erro, pedindo uma entrada válida.
