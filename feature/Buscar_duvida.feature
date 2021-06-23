@@ -39,3 +39,13 @@ Scenario: Busca com erro de digitação de uma dúvida existente.
             And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu tenho “0” dúvidas encontradas.
+
+Scenario: Busca de uma dúvida ainda não respondida.
+			Given Eu estou na página “Sistema de Dúvidas”
+			And Tenho uma dúvida com título “O que são stakeholders?” e está "respondida" 
+	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” e está "não-respondida"
+			When Eu seleciono apenas perguntas "não respondida"
+			And Confirmo a busca
+            Then Eu continuo na página “Sistema de Dúvidas”
+            And Eu consigo ver a dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?”
+            
