@@ -48,4 +48,12 @@ Scenario: Busca por dúvidas ainda não respondidas.
 			And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu consigo ver a dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?”
-            
+
+Scenario: Busca por dúvidas respondidas.
+			Given Eu estou na página “Sistema de Dúvidas”
+			And Tenho uma dúvida com título “O que são stakeholders?” e está "respondida" 
+	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” e está "não-respondida"
+			When Eu seleciono apenas perguntas "respondida"
+			And Confirmo a busca
+            Then Eu continuo na página “Sistema de Dúvidas”
+            And Eu consigo ver a dúvida com título “O que são stakeholders?”
