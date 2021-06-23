@@ -39,12 +39,3 @@ Scenario: Busca com erro de digitação de uma dúvida existente.
             And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu tenho “0” dúvidas encontradas.
-
-Scenario.
-            Given Eu estou na página “Sistema de Dúvidas”
-            And Tenho uma dúvida com título “O que são stakeholders?” 
-            And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
-            When Eu insiro a busca por “O que são stakeholdrs”
-            And Confirmo a busca
-            Then Eu continuo na página “Sistema de Dúvidas”
-            And Eu tenho “0” dúvidas encontradas.
