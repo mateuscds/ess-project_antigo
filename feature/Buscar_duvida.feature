@@ -6,17 +6,17 @@ Feature: Buscar uma dúvida
 
 Scenario: Busca de uma dúvida existente.
 			Given Eu estou na página “Sistema de Dúvidas”
-			And Tenho uma dúvida com título “O que são stakeholders?” feita por “Thiago”
-	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” feita por “Marcela”
+			And Tenho uma dúvida com título “O que são stakeholders?” 
+	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
 			When Eu insiro a busca por “O que são stakeholders?”
 			And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
-            And Eu consigo ver a dúvida com título “O que são stakeholders?” feita por “Thiago”.
+            And Eu consigo ver a dúvida com título “O que são stakeholders?” .
 
 Scenario: Busca de uma dúvida inexistente.
 			Given Eu estou na página “Sistema de Dúvidas”
-			And Tenho uma dúvida com título “O que são stakeholders?” feita por “Thiago”
-	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” feita por “Marcela”
+			And Tenho uma dúvida com título “O que são stakeholders?” 
+	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
 			When Eu insiro a busca por “O que são requisitos?”
 			And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
@@ -24,8 +24,8 @@ Scenario: Busca de uma dúvida inexistente.
 
 Scenario: Busca de uma dúvida a partir de uma string vazia.
 			Given Eu estou na página “Sistema de Dúvidas”
-			And Tenho uma dúvida com título “O que são stakeholders?” feita por “Thiago”
-        	And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” feita por “Marcela”
+			And Tenho uma dúvida com título “O que são stakeholders?” 
+        	And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
 			When Eu insiro a busca por “”
 			And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
@@ -33,10 +33,18 @@ Scenario: Busca de uma dúvida a partir de uma string vazia.
 		
 Scenario: Busca com erro de digitação de uma dúvida existente.
             Given Eu estou na página “Sistema de Dúvidas”
-            And Tenho uma dúvida com título “O que são stakeholders?” feita por “Thiago”
-            And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” feita por “Marcela”
+            And Tenho uma dúvida com título “O que são stakeholders?” 
+            And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
             When Eu insiro a busca por “O que são stakeholdrs”
             And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu tenho “0” dúvidas encontradas.
 
+Scenario.
+            Given Eu estou na página “Sistema de Dúvidas”
+            And Tenho uma dúvida com título “O que são stakeholders?” 
+            And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” 
+            When Eu insiro a busca por “O que são stakeholdrs”
+            And Confirmo a busca
+            Then Eu continuo na página “Sistema de Dúvidas”
+            And Eu tenho “0” dúvidas encontradas.
