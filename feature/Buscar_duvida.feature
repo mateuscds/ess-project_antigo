@@ -40,7 +40,7 @@ Scenario: Busca com erro de digitação de uma dúvida existente.
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu tenho “0” dúvidas encontradas.
 
-Scenario: Busca de uma dúvida ainda não respondida.
+Scenario: Busca por dúvidas ainda não respondidas.
 			Given Eu estou na página “Sistema de Dúvidas”
 			And Tenho uma dúvida com título “O que são stakeholders?” e está "respondida" 
 	        And Tenho uma dúvida com título “Qual diferença entre requisitos funcionais e não funcionais?” e está "não-respondida"
