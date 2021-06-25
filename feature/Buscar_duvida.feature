@@ -58,3 +58,11 @@ Scenario: Busca por dúvidas respondidas.
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu consigo ver "1" dúvida
             And Eu consigo ver a dúvida com título “O que são stakeholders?”
+
+Scenario: Busca por uma dúvida no sistema.
+			Given Eu tenho salvo no sistema a dúvida "O que são stakeholders?"
+			And Eu tenho salvo no sistema a dúvida "Qual diferença entre requisitos funcionais e não funcionais?"
+			When Eu realizo uma busca por "O que são stakeholders?"
+			Then Eu recebo a dúvida "O que são stakeholders?"
+			And Eu tenho salvo no sistema a dúvida "O que são stakeholders?"
+			And Eu tenho salvo no sistema a dúvida "Qual diferença entre requisitos funcionais e não funcionais?"
