@@ -58,5 +58,3 @@ Scenario: Busca por dúvidas respondidas.
             Then Eu continuo na página “Sistema de Dúvidas”
             And Eu consigo ver "1" dúvida
             And Eu consigo ver a dúvida com título “O que são stakeholders?”
-
-Scenario incompleto
