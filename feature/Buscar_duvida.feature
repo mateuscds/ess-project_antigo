@@ -57,4 +57,5 @@ Scenario: Busca por dúvidas respondidas.
 			When Eu seleciono apenas perguntas "respondida"
 			And Confirmo a busca
             Then Eu continuo na página “Sistema de Dúvidas”
+            And Eu consigo ver "1" dúvida
             And Eu consigo ver a dúvida com título “O que são stakeholders?”
