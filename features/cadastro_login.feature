@@ -77,3 +77,5 @@ Scenario: cadastro mal sucedido por falta de CPF.
     Given: que o usuário esteja na página de cadastro do sistema
     When: o usuário preenche NOME "Maria", um E-MAIL "maria@ufpe.br" e SENHA "4545"
     Then: a memória do sistema não é alterada e o novo usuário não é cadastrado
+
+Bianca Iz Sarabia
